@@ -10,7 +10,7 @@ export class CadastroInscricaoService {
 
   private http = inject(HttpClient);
 
-  private apiUrl = 'http://localhost:3000/inscricoes';
+  private apiUrl = 'http://127.0.0.1:8000/inscricao/';
 
   inscrever(inscricao: Inscricao): Observable<Inscricao> {
     return this.http.post<Inscricao>(this.apiUrl, inscricao);
