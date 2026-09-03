@@ -1,0 +1,80 @@
+{
+  "atleta": [],
+  "corridas": [
+    {
+      "nome": "davidi joao",
+      "cpf": 7555918528,
+      "descricao": "",
+      "data": "2026-07-31",
+      "distancia": 5,
+      "id": "EXo4eqWr5cM"
+    },
+    {
+      "nome": "cristian de hungria santos",
+      "cpf": 7555918528,
+      "descricao": "",
+      "data": "2026-08-28",
+      "distancia": 5,
+      "id": "MjotBjRk9wM"
+    },
+    {
+      "nome": "cristian de hungria santos",
+      "cpf": 7555918528,
+      "descricao": "",
+      "data": "2026-08-21",
+      "distancia": 100,
+      "id": "G6nA2gGhAsk"
+    },
+    {
+      "nome": "cristian de hungria santos",
+      "cpf": 7555918528,
+      "descricao": "",
+      "data": "2026-08-07",
+      "distancia": 5,
+      "id": "G2tyIhDKy9g"
+    },
+    {
+      "nome": "cristian de hungria santos",
+      "cpf": 7555918528,
+      "descricao": "",
+      "data": "2026-08-07",
+      "distancia": 25,
+      "id": "u2WeT1agI4M"
+    }
+  ],
+  "inscricoes": [
+    {
+      "corridaId": "",
+      "nomeAtleta": "",
+      "cpf": "",
+      "sexo": "",
+      "dataInscricao": "2026-08-21",
+      "id": "6eL3ybYTaog"
+    },
+    {
+      "corridaId": "",
+      "nomeAtleta": "cristian",
+      "cpf": "07555918528",
+      "sexo": "Masculino",
+      "dataInscricao": "2026-08-21",
+      "id": "z7eczROB5Uo"
+    },
+    {
+      "corridaId": "",
+      "nomeAtleta": "cristian",
+      "cpf": "07555918528",
+      "sexo": "Masculino",
+      "dataInscricao": "2026-08-21",
+      "id": "fyX6nDBqFgc"
+    },
+    {
+      "corridaId": "",
+      "nomeAtleta": "cristian",
+      "cpf": "07555918528",
+      "sexo": "Feminino",
+      "dataInscricao": "2026-08-27",
+      "id": "rnl6dFxgABY"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

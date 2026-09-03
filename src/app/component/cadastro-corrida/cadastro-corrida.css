@@ -1,0 +1,50 @@
+/* Organiza os títulos e rótulos */
+h2 {
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Força cada campo e texto a ficar em uma linha própria */
+label {
+  display: block;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Estiliza o botão */
+button {
+  display: block;
+  margin-top: 20px;
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #0b5ed7;
+}
+

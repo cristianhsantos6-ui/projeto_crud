@@ -1,0 +1,16 @@
+ *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+:root {
+    --cor-primaria: #000f06;
+    --cor-secundaria: #22C55E;
+    --cor01: #647067;
+    --cor02: #F5F3E8;
+    --botao01: #2079a1;
+    --botao02: #d43838;
+    --branca: #ffffff;
+}

@@ -1,0 +1,21 @@
+<section id="section-lista-Atleta">
+    <h2>Lista Atletas</h2>
+
+    @for (elem of listaAtletas(); track elem.id) {
+        <div class="atleta-item">
+            <span class="span-dados-atleta">
+                <!-- Substituído elem.dataNascimento por calcularIdade(elem.dataNascimento) -->
+                {{ elem.id }} - {{ elem.nome }} - {{ elem.cpf }} - {{ calcularIdade(elem.dataNascimento) }} anos - {{ elem.sexo }} - {{ elem.cidade }} / {{ elem.uf }}
+            </span>
+            <span class="span-lnk-atleta">
+                <a class="lnk-atleta lnk-alterar" (click)="carregaDadosAtletaForm(elem)">A</a>
+                <a class="lnk-atleta lnk-excluir" (click)="excluir(elem.id)">E</a>
+            </span>
+        </div>
+    } @empty {
+        <div class="div-item-pessoa">
+            NENHUM REGISTRO NA LISTA
+        </div>
+    }
+</section>
+

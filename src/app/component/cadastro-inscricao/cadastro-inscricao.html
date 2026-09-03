@@ -1,0 +1,66 @@
+<div class="container">
+    <h2>Inscrição de Atleta</h2>
+  
+    <form (ngSubmit)="salvarInscricao()">
+    
+      <br>
+  
+      <!-- Nome do Atleta -->
+      <div class="form-group">
+        <label for="nome">Nome do Atleta:</label>
+        <input 
+          type="text" 
+          id="nome" 
+          [(ngModel)]="inscricao.nomeAtleta" 
+          name="nomeAtleta" 
+          placeholder="Digite o nome completo" 
+          required>
+      </div>
+  
+      <br>
+  
+      <!-- CPF -->
+      <div class="form-group">
+        <label for="cpf">CPF:</label>
+        <input 
+          type="text" 
+          id="cpf" 
+          [(ngModel)]="inscricao.cpf" 
+          name="cpf" 
+          placeholder="000.000.000-00" 
+          required>
+      </div>
+  
+      <br>
+  
+      <!-- Sexo -->
+      <div class="form-group">
+        <label for="sexo">Sexo:</label>
+        <select id="sexo" [(ngModel)]="inscricao.sexo" name="sexo" required>
+          <option value="">-- Selecione --</option>
+          <option value="Masculino">Masculino</option>
+          <option value="Feminino">Feminino</option>
+          <option value="Outro">Outro</option>
+        </select>
+      </div>
+  
+      <br>
+  
+      <!-- Data da Inscrição -->
+      <div class="form-group">
+        <label for="dataInscricao">Data da Inscrição:</label>
+        <input 
+          type="date" 
+          id="dataInscricao" 
+          [(ngModel)]="inscricao.dataInscricao" 
+          name="dataInscricao" 
+          required>
+      </div>
+  
+      <br>
+  
+      <button type="submit">Confirmar Inscrição</button>
+    </form>
+  </div>
+  
+  

@@ -1,0 +1,44 @@
+<div id="geral">
+
+    <div id="cabecario">
+        <h2>
+            <span>C</span><span>a</span><span>d</span><span>a</span><span>s</span><span>t</span><span>r</span><span>o</span>
+
+            <span> de </span>
+
+          
+
+            <span> </span>
+            <span>C</span><span>o</span><span>r</span><span>r</span><span>i</span><span>d</span><span>a</span>
+        </h2>
+    </div>
+
+    <div id="form">
+
+     
+        <label for="cpf">Nome completo</label>
+        <input type="text" name="nome" id="nome" class="input01" [(ngModel)]="corrida.nome" maxlength="60" required placeholder="Digite seu nome completo">
+
+       
+        <label for="cpf"> Digite o CPF </label>
+        <input type="number" name="cpf" id="cpf" class="input01" [(ngModel)]="corrida.cpf" maxlength="11" required placeholder="Digite seu cpf ">
+
+
+        <label for="date">Data da Corrida</label>
+        <input type="date" name="date" id="date" [(ngModel)]="corrida.data">
+
+        <label for="dist">Distância Disponível</label>
+        <select name="dist" id="dist" [(ngModel)]="corrida.distancia">
+            <option [ngValue]="5">5km</option>
+            <option [ngValue]="10">10km</option>
+            <option [ngValue]="25">25km</option>
+            <option [ngValue]="50">50km</option>
+            <option [ngValue]="100">100km</option>
+        </select>
+
+        <div id="btns">
+            <button type="button" (click)="cadastrar()">Cadastrar Corrida</button>
+        </div>
+    </div>
+</div>
+

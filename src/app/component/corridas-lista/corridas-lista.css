@@ -1,0 +1,52 @@
+.container-corridas {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0 20px;
+  font-family: Arial, sans-serif;
+}
+
+.container-corridas h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.tabela-corridas {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.tabela-corridas th {
+  background-color: #f2f2f2;
+  border-bottom: 2px solid #ccc;
+  padding: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.tabela-corridas td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.btn-excluir {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-excluir:hover {
+  background-color: #bb2d3b;
+}
+
+.sem-registros {
+  padding: 20px;
+  text-align: center;
+  color: #777;
+}
+

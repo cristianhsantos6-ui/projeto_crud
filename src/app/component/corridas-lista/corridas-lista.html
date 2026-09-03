@@ -1,0 +1,29 @@
+
+<div class="container">
+  <h2>Lista de Corridas </h2>
+
+  <table border="1" style="width: 100%; text-align: left; border-collapse: collapse;">
+    <thead>
+      <tr style="background-color: #00000067;">
+        <th>ID</th>
+        <th>Nome</th>
+        <th>CPF</th>
+        <th>Data</th>
+        <th>Distância</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- O *ngFor pega a variável 'corridas' do seu .ts -->
+      <tr *ngFor="let c of corridas">
+        <td>{{ c.id }}</td>
+        <td>{{ c.nome }}</td>
+        <td>{{ c.cpf }}</td>
+        <td>{{ c.data }}</td>
+        <td>{{ c.distancia }} km</td>
+      </tr>
+    </tbody>
+  </table> 
+</div>
+
+
+

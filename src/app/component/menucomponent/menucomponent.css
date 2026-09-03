@@ -1,0 +1,52 @@
+
+#cabecalho, #ul-menu, #logo{
+    display: flex;
+    align-items: center;
+}
+
+#ul-menu, #logo{
+    height: 100%;
+}
+
+#cabecalho{
+    width: 1000px;
+    height: 150px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: var(--cor-primaria);
+    justify-content: space-between;
+    color: var(--branca);
+}
+
+#logo, #menu{
+    width: 30%;
+    font-size: 25px;
+}
+
+#titulo-logo{
+    color: var(--botao02);
+    border: 1px solid var(--botao02);
+    margin: 0px 10px;
+    padding: 0px 10px;
+}
+
+
+#menu{
+    width: 70%;
+}
+
+#ul-menu {
+    list-style: none;
+}
+
+.lnk-menu{
+    color: var(--branca);
+    text-decoration: none;
+    margin: 0px 10px;
+    transition: 0.5s ease;
+    font-size: 20px;
+}
+
+.lnk-menu:hover{
+    opacity: 0.5;
+}
