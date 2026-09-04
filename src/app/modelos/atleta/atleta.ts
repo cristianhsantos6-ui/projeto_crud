@@ -1,14 +1,19 @@
 export interface Atleta {
   id?: number | string;
   idAtleta?: number;
+
   nome: string;
   cpf: string | number;
-  dataNascimento: string;
+  data_nascimento: string;
+
+  peso: number;
+  altura: number;
+
   sexo: string;
-  cep: string;
-  ruaLogradouro: string;
+
+  cep: string | number;
+  rua_logradouro: string;
   bairro: string;
   cidade: string;
   uf?: string;
 }
-

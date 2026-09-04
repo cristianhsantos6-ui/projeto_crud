@@ -10,52 +10,95 @@ export class AtletaService {
 
   atletas: Atleta[] = [];
 
+  private apiUrl = 'http://127.0.0.1:8000/pessoa/';
+
   constructor(private http: HttpClient) {}
 
   listarAtletas(): Observable<Atleta[]> {
-    const urlApi = `https://6a7f6d923183f5fd884b1a61.mockapi.io/esportearlivre/atleta/`;
-    return this.http.get<Atleta[]>(urlApi);
+    return this.http.get<Atleta[]>(this.apiUrl);
   }
 
   listarAtleta(idAtleta: number): Observable<Atleta> {
-    const urlApi = `https://6a7f6d923183f5fd884b1a61.mockapi.io/esportearlivre/atleta/${idAtleta}`
-    return this.http.get<Atleta>(urlApi)
+    return this.http.get<Atleta>(
+      `${this.apiUrl}${idAtleta}`
+    );
   }
 
-
   salvarAtleta(atleta: Atleta): Observable<Atleta> {
-    const urlApi = `https://6a7f6d923183f5fd884b1a61.mockapi.io/esportearlivre/atleta/`;
-    return this.http.post<Atleta>(urlApi, atleta);
+
+    const pessoa = {
+      nome: atleta.nome,
+      cpf: Number(atleta.cpf),
+      data_nascimento: atleta.data_nascimento,
+      peso: atleta.peso,
+      altura: atleta.altura,
+      sexo: atleta.sexo,
+      cep: Number(atleta.cep),
+      rua_logradouro: atleta.rua_logradouro,
+      bairro: atleta.bairro,
+      cidade: atleta.cidade,
+      uf: atleta.uf
+    };
+
+    return this.http.post<Atleta>(
+      this.apiUrl,
+      pessoa
+    );
   }
 
   excluirAtleta(id: number): Observable<Atleta> {
-    const urlApi = `https://6a7f6d923183f5fd884b1a61.mockapi.io/esportearlivre/atleta/${id}`;
-    return this.http.delete<Atleta>(urlApi);
+    return this.http.delete<Atleta>(
+      `${this.apiUrl}${id}`
+    );
   }
 
   alterarAtleta(atleta: Atleta): Observable<Atleta> {
-    const urlApi = `https://6a7f6d923183f5fd884b1a61.mockapi.io/esportearlivre/atleta/${atleta.id}`;
-    return this.http.put<Atleta>(urlApi, atleta);
+
+    const pessoa = {
+      nome: atleta.nome,
+      cpf: Number(atleta.cpf),
+      data_nascimento: atleta.data_nascimento,
+      peso: atleta.peso,
+      altura: atleta.altura,
+      sexo: atleta.sexo,
+      cep: Number(atleta.cep),
+      rua_logradouro: atleta.rua_logradouro,
+      bairro: atleta.bairro,
+      cidade: atleta.cidade,
+      uf: atleta.uf
+    };
+
+    return this.http.put<Atleta>(
+      `${this.apiUrl}${atleta.id}`,
+      pessoa
+    );
   }
 
-//FUNÇÃO PARA CONVERTER PARA IDADE
-calcularIdade (dataNascimento: string)  {
-  if (!dataNascimento) return 0;
+  calcularIdade(dataNascimento: string): number {
 
- const nascimento = new Date(dataNascimento);
- const hoje = new Date ();
+    if (!dataNascimento) {
+      return 0;
+    }
 
- let idade = hoje.getFullYear() - nascimento.getFullYear();
- const mes = hoje.getMonth() - nascimento.getMonth();
+    const nascimento = new Date(dataNascimento);
+    const hoje = new Date();
 
- if (mes < 0 || (mes === 0 && hoje.getDate () <
- nascimento.getDate ())) {
-   idade--;
- }
- return idade;
+    let idade =
+      hoje.getFullYear() -
+      nascimento.getFullYear();
+
+    const mes =
+      hoje.getMonth() -
+      nascimento.getMonth();
+
+    if (
+      mes < 0 ||
+      (mes === 0 &&
+       hoje.getDate() < nascimento.getDate())
+    ) {
+      idade--;
+    }
+
+    return idade;
+  }
 }
-
-
-
-}
-

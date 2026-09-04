@@ -15,10 +15,12 @@ import { Atleta } from '../../modelos/atleta/atleta';
 export class AtletaComponent implements OnInit {
   nome: string = '';
   cpf: number | string = '';
-  dataNascimento = '';
+  data_nascimento = '';
+  peso: number = 0 ;
+  altura: number = 0  ;
   sexo: string = '';
-  cep: string = '';
-  ruaLogradouro: string = '';
+  cep: string | number = '';
+  rua_logradouro: string = '';
   bairro: string = '';
   cidade: string = '';
   uf: string = '';
@@ -53,10 +55,12 @@ export class AtletaComponent implements OnInit {
   limparDados(): void {
     this.nome = '';
     this.cpf = '';
-    this.dataNascimento = '';
+    this.data_nascimento = '';
+    this.peso = 0;
+    this.altura = 0;
     this.sexo = '';
     this.cep = '';
-    this.ruaLogradouro = '';
+    this.rua_logradouro = '';
     this.bairro = '';
     this.cidade = '';
     this.uf = '';
@@ -69,10 +73,12 @@ export class AtletaComponent implements OnInit {
       next: (dadosAtleta: Atleta) => {
         this.nome = dadosAtleta.nome;
         this.cpf = dadosAtleta.cpf;
-        this.dataNascimento = dadosAtleta.dataNascimento;
+        this.data_nascimento = dadosAtleta.data_nascimento;
+        this.peso = dadosAtleta.peso;
+        this.altura = dadosAtleta.altura;
         this.sexo = dadosAtleta.sexo;
         this.cep = dadosAtleta.cep;
-        this.ruaLogradouro = dadosAtleta.ruaLogradouro;
+        this.rua_logradouro = dadosAtleta.rua_logradouro;
         this.bairro = dadosAtleta.bairro;
         this.cidade = dadosAtleta.cidade;
         this.uf = dadosAtleta.uf || '';
@@ -89,10 +95,12 @@ export class AtletaComponent implements OnInit {
     const atleta: Atleta = {
       nome: this.nome,
       cpf: this.cpf,
-      dataNascimento: this.dataNascimento,
+      data_nascimento: this.data_nascimento,
+      peso: this.peso,
+      altura: this.altura,
       sexo: this.sexo,
       cep: this.cep,
-      ruaLogradouro: this.ruaLogradouro,
+      rua_logradouro: this.rua_logradouro,
       bairro: this.bairro,
       cidade: this.cidade,
       uf: this.uf

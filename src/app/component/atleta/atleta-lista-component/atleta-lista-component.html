@@ -5,7 +5,7 @@
         <div class="atleta-item">
             <span class="span-dados-atleta">
                 <!-- Substituído elem.dataNascimento por calcularIdade(elem.dataNascimento) -->
-                {{ elem.id }} - {{ elem.nome }} - {{ elem.cpf }} - {{ calcularIdade(elem.dataNascimento) }} anos - {{ elem.sexo }} - {{ elem.cidade }} / {{ elem.uf }}
+                {{ elem.id }} - {{ elem.nome }} - {{ elem.cpf }} - {{ calcularIdade(elem.data_nascimento) }} anos - {{ elem.sexo }} - {{ elem.cidade }} / {{ elem.uf }}
             </span>
             <span class="span-lnk-atleta">
                 <a class="lnk-atleta lnk-alterar" (click)="carregaDadosAtletaForm(elem)">A</a>
