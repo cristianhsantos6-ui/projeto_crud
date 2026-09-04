@@ -7,7 +7,7 @@ import { corrida } from '../../model/corrida/corrida';
   providedIn: 'root'
 })
 export class CorridaService {
-  private apiUrl = 'http://localhost:3000/corridas'; // Ajuste a URL da sua API se necessário
+  private apiUrl = 'http://127.0.0.1:8000/corrida/'; // Ajuste a URL da sua API se necessário
 
   constructor(private http: HttpClient) {}
 
@@ -20,7 +20,7 @@ export class CorridaService {
   }
 
   excluir(id: number): Observable<void> {
-    return this.http.delete<void>(`${this.apiUrl}/${id}`);
+    return this.http.delete<void>(`${this.apiUrl}${id}`);
   }
 }
 
