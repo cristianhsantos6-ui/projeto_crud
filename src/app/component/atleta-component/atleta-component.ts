@@ -92,6 +92,9 @@ export class AtletaComponent implements OnInit {
   }
 
   enviarDadosAtleta(): void {
+ 
+    
+
     const atleta: Atleta = {
       nome: this.nome,
       cpf: this.cpf,

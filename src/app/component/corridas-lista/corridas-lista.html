@@ -1,29 +1,40 @@
-
 <div class="container">
-  <h2>Lista de Corridas </h2>
+
+  <h2>Lista de Corridas</h2>
 
   <table border="1" style="width: 100%; text-align: left; border-collapse: collapse;">
+
     <thead>
       <tr style="background-color: #00000067;">
         <th>ID</th>
-        <th>Nome</th>
-        <th>CPF</th>
+        <th>Descrição</th>
         <th>Data</th>
-        <th>Distância</th>
+        <th>5 km</th>
+        <th>10 km</th>
+        <th>25 km</th>
       </tr>
     </thead>
+
     <tbody>
-      <!-- O *ngFor pega a variável 'corridas' do seu .ts -->
+
       <tr *ngFor="let c of corridas">
-        <td>{{ c.id }}</td>
-        <td>{{ c.nome }}</td>
-        <td>{{ c.cpf }}</td>
-        <td>{{ c.data }}</td>
-        <td>{{ c.distancia }} km</td>
+
+        <td>{{ c.idcorrida }}</td>
+
+        <td>{{ c.descricao_corrida }}</td>
+
+        <td>{{ c.data_corrida }}</td>
+
+        <td>{{ c.distancia_5km ? 'Sim' : 'Não' }}</td>
+
+        <td>{{ c.distancia_10km ? 'Sim' : 'Não' }}</td>
+
+        <td>{{ c.distancia_25km ? 'Sim' : 'Não' }}</td>
+
       </tr>
+
     </tbody>
-  </table> 
+
+  </table>
+
 </div>
-
-
-

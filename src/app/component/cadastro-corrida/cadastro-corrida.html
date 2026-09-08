@@ -6,39 +6,93 @@
 
             <span> de </span>
 
-          
-
-            <span> </span>
             <span>C</span><span>o</span><span>r</span><span>r</span><span>i</span><span>d</span><span>a</span>
         </h2>
     </div>
 
     <div id="form">
 
-     
-        <label for="cpf">Nome completo</label>
-        <input type="text" name="nome" id="nome" class="input01" [(ngModel)]="corrida.nome" maxlength="60" required placeholder="Digite seu nome completo">
+        <!-- DESCRIÇÃO DA CORRIDA -->
+        <label for="descricao_corrida">
+            Descrição da Corrida
+        </label>
 
-       
-        <label for="cpf"> Digite o CPF </label>
-        <input type="number" name="cpf" id="cpf" class="input01" [(ngModel)]="corrida.cpf" maxlength="11" required placeholder="Digite seu cpf ">
+        <input
+            type="text"
+            name="descricao_corrida"
+            id="descricao_corrida"
+            class="input01"
+            [(ngModel)]="corrida.descricao_corrida"
+            maxlength="200"
+            required
+            placeholder="Digite a descrição da corrida"
+        >
 
 
-        <label for="date">Data da Corrida</label>
-        <input type="date" name="date" id="date" [(ngModel)]="corrida.data">
+        <!-- DATA DA CORRIDA -->
+        <label for="data_corrida">
+            Data da Corrida
+        </label>
 
-        <label for="dist">Distância Disponível</label>
-        <select name="dist" id="dist" [(ngModel)]="corrida.distancia">
-            <option [ngValue]="5">5km</option>
-            <option [ngValue]="10">10km</option>
-            <option [ngValue]="25">25km</option>
-            <option [ngValue]="50">50km</option>
-            <option [ngValue]="100">100km</option>
-        </select>
+        <input
+            type="date"
+            name="data_corrida"
+            id="data_corrida"
+            class="input01"
+            [(ngModel)]="corrida.data_corrida"
+            required
+        >
 
-        <div id="btns">
-            <button type="button" (click)="cadastrar()">Cadastrar Corrida</button>
+
+        <!-- DISTÂNCIAS -->
+        <label>
+            Distâncias Disponíveis
+        </label>
+
+        <div id="distancias">
+
+            <label>
+                <input
+                    type="checkbox"
+                    name="distancia_5km"
+                    [(ngModel)]="corrida.distancia_5km"
+                >
+                5 km
+            </label>
+
+            <label>
+                <input
+                    type="checkbox"
+                    name="distancia_10km"
+                    [(ngModel)]="corrida.distancia_10km"
+                >
+                10 km
+            </label>
+
+            <label>
+                <input
+                    type="checkbox"
+                    name="distancia_25km"
+                    [(ngModel)]="corrida.distancia_25km"
+                >
+                25 km
+            </label>
+
         </div>
-    </div>
-</div>
 
+
+        <!-- BOTÃO -->
+        <div id="btns">
+
+            <button
+                type="button"
+                (click)="cadastrar()"
+            >
+                Cadastrar Corrida
+            </button>
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,9 +1,15 @@
 export interface corrida {
-  id?: string;
-  nome: string;
-  cpf: string | number;
-  descricao?: string;
-  data: string;
-  distancia: string | number;
-}
 
+  idcorrida?: number;
+
+  descricao_corrida: string;
+
+  data_corrida: string;
+
+  distancia_5km: boolean;
+
+  distancia_10km: boolean;
+
+  distancia_25km: boolean;
+
+}

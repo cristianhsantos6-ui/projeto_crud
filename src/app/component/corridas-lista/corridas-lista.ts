@@ -1,5 +1,6 @@
 import { Component, OnInit, inject, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { CorridaService } from '../../service/corrida/corrida';
 import { corrida as Corrida } from '../../model/corrida/corrida';
 
@@ -11,6 +12,7 @@ import { corrida as Corrida } from '../../model/corrida/corrida';
   styleUrl: './corridas-lista.css'
 })
 export class CorridasListaComponent implements OnInit {
+
   corridas: Corrida[] = [];
 
   private corridaService = inject(CorridaService);
@@ -21,16 +23,22 @@ export class CorridasListaComponent implements OnInit {
   }
 
   carregarCorridas(): void {
+
     this.corridaService.listar().subscribe({
+
       next: (dados: Corrida[]) => {
+
         this.corridas = dados;
+
         console.log('Dados recebidos da API:', dados);
+
         this.cdr.detectChanges();
       },
+
       error: (erro: unknown) => {
         console.error('Erro ao buscar corridas:', erro);
       }
+
     });
   }
 }
-

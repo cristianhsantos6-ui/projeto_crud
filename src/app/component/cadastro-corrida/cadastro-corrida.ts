@@ -15,11 +15,12 @@ import { corrida as Corrida } from '../../model/corrida/corrida';
 export class CadastroCorrida { // <-- Certifique-se de que tem o 'export' aqui
   corrida: Corrida = {
 
-    nome: '',
-    cpf: '',
-    descricao: '',
-    data: '',
-    distancia: 0
+    descricao_corrida: '',
+    data_corrida: '',
+    distancia_5km: false,
+    distancia_10km: false,
+    distancia_25km: false
+
   };
 
   constructor(
